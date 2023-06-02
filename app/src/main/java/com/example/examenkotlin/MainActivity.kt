@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         txtNumeroCuenta=findViewById(R.id.txtNumeroCuenta)
 
     }
+
     private fun btnIngresar()
 
     {
@@ -75,6 +76,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
 
     private fun btnSalir() {
         val confirmar = AlertDialog.Builder(this)
