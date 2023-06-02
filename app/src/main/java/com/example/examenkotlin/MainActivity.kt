@@ -49,7 +49,32 @@ class MainActivity : AppCompatActivity() {
         txtNumeroCuenta=findViewById(R.id.txtNumeroCuenta)
 
     }
+    private fun btnIngresar()
 
+    {
+        nombre=txtNombre.text.toString();
+        banco=txtBanco.text.toString();
+        saldo=txtSaldo.text.toString();
+        numCuenta=txtNumeroCuenta.text.toString();
+
+        if(txtNombre.text.toString().equals("") || txtBanco.text.toString().equals("") || txtSaldo.text.toString().equals("") || txtNumeroCuenta.text.toString().equals(""))
+        {
+            Toast.makeText(applicationContext,"No deje campos vacios",Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            val intent = Intent(this,CuentaBancoActivity::class.java)
+            intent.putExtra("nombre",nombre)
+            intent.putExtra("banco",banco)
+            intent.putExtra("saldo",saldo)
+            intent.putExtra("numCuenta", numCuenta)
+            startActivity(intent)
+
+        }
+
+
+
+    }
 
     private fun btnSalir() {
         val confirmar = AlertDialog.Builder(this)
